@@ -31,34 +31,37 @@ a {
 *::-webkit-scrollbar {
   height: 8px;
   width: 8px;
+  margin: 0;
 }
 *::-webkit-scrollbar-track {
   background: #3a3a3a;
   border-radius: 20px;
+  margin: 0;
 }
 *::-webkit-scrollbar-thumb {
   background-color: #5454e2;
   border-radius: 20px;
+  margin: 0;
 }
 
 .App_Body {
+  position: relative;
   background-color: #2e2e2e;
   height: 100vh;
-  padding: 2vh 1vw;
-  font-size: calc(10px + 2vmin);
+  width: 100vw;
+  font-size: calc(10px + 1.1vmin);
   color: white;
 
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-areas:
-    "l l l p"
-    "c c c f";
+  display: flex;
+  flex-direction: column;
 }
 
 li {
-  width: 150px;
-  height: 200px;
-  background-color: #5454e2;
+  width: 100px;
+  height: 120px;
+  margin: 0 3px 0 3px;
+  background-color: #a7a7bde2;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,20 +69,61 @@ li {
 }
 
 .Search_Filter {
-  grid-area: p;
+  height: 50px;
+  width: 100vw;
+  /* background-color: aqua; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .filterItens {
-  grid-area: f;
+  height: 150px;
+  /* background-color: green; */
+  overflow: auto;
 }
+.filterItens ul {
+  display: flex;
+}
+
 .App_List_Itens {
-  grid-area: l;
+  overflow: auto;
 }
 .App_List_Itens ul {
   display: flex;
 }
+.App_List_Itens ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bntList {
+  width: 80px;
+  margin: 0 5px 0 5px;
+}
+
 .App_List_Cart_Box {
-  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  height: 40%;
+  /* background-color: #62628a; */
+}
+.App_List_Cart {
+  width: 100%;
+  overflow: auto;
+}
+.paiListCart {
+  overflow: auto;
 }
 .listCart {
   display: flex;
+}
+.bntCar {
+  width: 80px;
+  margin: 0 5px 0 5px;
+  padding: 5px 0;
 }

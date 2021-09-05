@@ -5,7 +5,9 @@ const Product = ({ item, handleClick }) => {
       <p>{item.name}</p>
       <p>{item.category}</p>
       <p>R$ {item.price}</p>
-      <button onClick={() => handleClick(item.id)}>Add Carrinho</button>
+      <button className="bntList" onClick={() => handleClick(item.id)}>
+        Add Carrinho
+      </button>
     </li>
   );
 };

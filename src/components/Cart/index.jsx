@@ -6,7 +6,9 @@ const Cart = ({ currentSale, handleRemove }) => {
           <li className="itemListCart">
             <p>{item.name}</p>
             <p>R$ {item.price}</p>
-            <button onClick={() => handleRemove(item.id)}>Remover</button>
+            <button className="bntCar" onClick={() => handleRemove(item.id)}>
+              Remover
+            </button>
           </li>
         ))}
       </ul>

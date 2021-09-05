@@ -1,4 +1,6 @@
+import "./styleInput.css";
 import { useState } from "react";
+
 const InputFilter = ({ products, setFilteredProducts, filteredProducts }) => {
   const [valueInput, setValueInput] = useState("");
 
@@ -26,14 +28,14 @@ const InputFilter = ({ products, setFilteredProducts, filteredProducts }) => {
   };
 
   return (
-    <>
+    <div>
       <input
         type="text"
         value={valueInput}
         onChange={(event) => setValueInput(event.target.value)}
       />
       <button onClick={handleFilter}>Pesquisar</button>
-    </>
+    </div>
   );
 };
 
