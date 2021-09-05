@@ -4,7 +4,8 @@ import MenuContainer from "./components/MenuContainer";
 import Cart from "./components/Cart";
 import TotCar from "./components/TotCar";
 import InputFilter from "./components/InputFilter";
-import Product from "./components/Products";
+import ProductsFiltered from "./components/ProductsFiltered";
+
 function App() {
   const [products, setProducts] = useState([
     { id: 1, name: "Hamburguer", category: "Sanduíches", price: 7.99 },
@@ -20,43 +21,39 @@ function App() {
 
   const [currentSale, setCurrentSale] = useState([]);
 
-  const showProducts = (prod) => {
-    setFilteredProducts([...filteredProducts, prod]);
-  };
-
   const handleRemove = (productId) => {
     const newCurrentSale = currentSale.filter((item) => item.id !== productId);
     setCurrentSale(newCurrentSale);
   };
 
   const handleClick = (productId) => {
-    const idProd = products.find((item) => item.id === productId);
+    // if (currentSale.find((element) => element.id === productId) === undefined) {
+    //   setCurrentSale([
+    //     ...currentSale,
+    //     products.find((item) => item.id === productId),
+    //   ]);
+    // }
 
-    currentSale.length === 0
-      ? setCurrentSale([...currentSale, idProd])
-      : currentSale.map((item) =>
-          item.id !== productId
-            ? setCurrentSale([...currentSale, idProd])
-            : false
-        );
+    const newSale = products.find((products) => products.id === productId);
+    currentSale.find((element) => element.id === productId) === undefined
+      ? setCurrentSale([...currentSale, newSale])
+      : setCurrentSale([...currentSale]);
   };
 
   return (
     <body className="App_Body">
       <div className="Search_Filter">
-        <InputFilter products={products} showProducts={showProducts} />
+        <InputFilter
+          products={products}
+          setFilteredProducts={setFilteredProducts}
+        />
       </div>
 
       <div className="filterItens">
-        <ul className="filterItens_List">
-          {filteredProducts.map((item) => {
-            <li className="filterItens_List_Itens">
-              <p>{item.name}</p>
-              <p>{item.category}</p>
-              <p>{item.price}</p>
-            </li>;
-          })}
-        </ul>
+        <ProductsFiltered
+          filteredProducts={filteredProducts}
+          handleClick={handleClick}
+        />
       </div>
 
       <div className="App_List_Itens">

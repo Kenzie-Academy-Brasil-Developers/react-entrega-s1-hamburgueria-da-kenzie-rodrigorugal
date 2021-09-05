@@ -1,15 +1,28 @@
 import { useState } from "react";
-const InputFilter = ({ products, showProducts }) => {
+const InputFilter = ({ products, setFilteredProducts }) => {
   const [valueInput, setValueInput] = useState("");
 
   const handleFilter = () => {
-    products.map((item) =>
-      item.name === valueInput
-        ? showProducts(item)
-        : item.category === valueInput
-        ? showProducts(item)
-        : false
+    const filtName = products.filter((item) => item.name === valueInput);
+    const filtCategory = products.filter(
+      (item) => item.category === valueInput
     );
+
+    if (filtName.map((item) => item.name === valueInput)) {
+      console.log(filtName);
+      setFilteredProducts(filtName);
+    } else if (filtCategory.map((item) => item.category === valueInput)) {
+      console.log(filtCategory);
+      setFilteredProducts(filtCategory);
+    }
+
+    // if (filtName.map((item) => item.name === valueInput)) {
+    //   console.log(filtName);
+    //   setFilteredProducts(filtName);
+    // } else if (filtCategory.map((item) => item.category === valueInput)) {
+    //   console.log(filtCategory);
+    //   setFilteredProducts(filtCategory);
+    // }
   };
 
   return (
