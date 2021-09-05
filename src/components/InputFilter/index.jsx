@@ -1,5 +1,5 @@
 import { useState } from "react";
-const InputFilter = ({ products, setFilteredProducts }) => {
+const InputFilter = ({ products, setFilteredProducts, filteredProducts }) => {
   const [valueInput, setValueInput] = useState("");
 
   const handleFilter = () => {
@@ -8,19 +8,19 @@ const InputFilter = ({ products, setFilteredProducts }) => {
       (item) => item.category === valueInput
     );
 
-    if (filtName.map((item) => item.name === valueInput)) {
-      console.log(filtName);
-      setFilteredProducts(filtName);
-    } else if (filtCategory.map((item) => item.category === valueInput)) {
-      console.log(filtCategory);
-      setFilteredProducts(filtCategory);
-    }
+    filtName.map((item) =>
+      item.name === valueInput ? setFilteredProducts(filtName) : false
+    );
+
+    filtCategory.map((item) =>
+      item.category === valueInput ? setFilteredProducts(filtCategory) : false
+    );
+
+    setValueInput("");
 
     // if (filtName.map((item) => item.name === valueInput)) {
-    //   console.log(filtName);
     //   setFilteredProducts(filtName);
     // } else if (filtCategory.map((item) => item.category === valueInput)) {
-    //   console.log(filtCategory);
     //   setFilteredProducts(filtCategory);
     // }
   };

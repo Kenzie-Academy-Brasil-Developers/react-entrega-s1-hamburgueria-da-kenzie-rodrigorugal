@@ -1,11 +1,6 @@
 import Product from "../Products";
 
 const ProductsFiltered = ({ filteredProducts, handleClick }) => {
-  // const showProducts = () => {
-  //   console.log(filteredProducts);
-  // };
-  // showProducts();
-
   return (
     <div>
       <ul>

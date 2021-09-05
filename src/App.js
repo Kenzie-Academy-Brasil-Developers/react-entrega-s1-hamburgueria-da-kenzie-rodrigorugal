@@ -46,6 +46,7 @@ function App() {
         <InputFilter
           products={products}
           setFilteredProducts={setFilteredProducts}
+          filteredProducts={filteredProducts}
         />
       </div>
 
