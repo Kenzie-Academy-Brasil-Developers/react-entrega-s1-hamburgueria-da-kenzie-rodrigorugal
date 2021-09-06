@@ -29,8 +29,8 @@ a {
 }
 
 *::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+  height: 1px;
+  width: 1px;
   margin: 0;
 }
 *::-webkit-scrollbar-track {
@@ -54,6 +54,21 @@ a {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App_Main {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 95%;
+  width: 90%;
+  padding: 15px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 0 8px 2px #6a4103;
+  border-radius: 20px;
 }
 
 li {
@@ -71,7 +86,8 @@ li {
 
 .Search_Filter {
   height: 50px;
-  width: 100vw;
+  width: 100%;
+  margin-bottom: 10px;
   /* background-color: aqua; */
 
   display: flex;
@@ -80,7 +96,7 @@ li {
 }
 
 .filterItens {
-  height: 150px;
+  height: 225px;
   /* background-color: green; */
   overflow: auto;
   margin: 0px 0 11px 0;
@@ -89,9 +105,14 @@ li {
   display: flex;
 }
 
+.filterItens ul li {
+  height: 205px;
+  margin: 10px;
+}
+
 .App_List_Itens {
   overflow: auto;
-  height: 200px;
+  height: 218px;
 }
 .App_List_Itens ul {
   display: flex;
@@ -100,7 +121,10 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 165px;
+  height: 197px;
+  width: 125px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .bntList {
   width: 120px;
@@ -116,7 +140,7 @@ li {
   align-items: center;
   justify-content: space-evenly;
 
-  height: 40%;
+  height: 35%;
   /* background-color: #62628a; */
 }
 .App_List_Cart {
@@ -219,9 +243,75 @@ li {
 
 /* media query */
 
-@media (min-width: 769px) {
+@media (min-width: 1000px) {
   /*****
     Posicionar a lista do carrinho na vertical no lado direito
     Diminuir a box dos item central e de pesquisa
   ******/
+  *::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: #c9c9c900;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #44290be7;
+  }
+
+  .App_Main {
+    position: relative;
+    padding: 20px;
+    max-width: 1120px;
+  }
+
+  .App_List_Cart {
+    height: 90%;
+  }
+
+  .App_List_Cart_Box {
+    background-color: #af8a5a6e;
+    position: absolute;
+    top: 103px;
+    width: 200px;
+    height: 481px;
+    border-radius: 25px;
+    box-shadow: 0 0 8px 2px #6b450b;
+  }
+  .App_List_Itens {
+    width: 72%;
+  }
+
+  .App_List_Cart {
+    border-radius: 20px;
+  }
+  .paiListCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .listCart {
+    flex-direction: column;
+  }
+  .listCart li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .centerItensDesktop {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 96%;
+    height: 80%;
+  }
+
+  .filterItens ul {
+    align-items: center;
+    justify-content: center;
+  }
+
+  li:hover {
+    box-shadow: 0 0 8px 2px #6a4103;
+  }
 }

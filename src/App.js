@@ -76,35 +76,38 @@ function App() {
 
   return (
     <body className="App_Body">
-      <div className="Search_Filter">
-        <InputFilter
-          products={products}
-          setFilteredProducts={setFilteredProducts}
-          filteredProducts={filteredProducts}
-        />
-      </div>
-
-      <div className="filterItens">
-        <ProductsFiltered
-          filteredProducts={filteredProducts}
-          handleClick={handleClick}
-        />
-      </div>
-
-      <div className="App_List_Itens">
-        <MenuContainer products={products} handleClick={handleClick} />
-      </div>
-
-      <div className="App_List_Cart_Box">
-        <TotCar currentSale={currentSale} />
-        <div className="App_List_Cart">
-          <Cart
-            currentSale={currentSale}
-            handleRemove={handleRemove}
+      <main className="App_Main">
+        <div className="Search_Filter">
+          <InputFilter
             products={products}
+            setFilteredProducts={setFilteredProducts}
+            filteredProducts={filteredProducts}
           />
         </div>
-      </div>
+
+        <div className="centerItensDesktop">
+          <div className="filterItens">
+            <ProductsFiltered
+              filteredProducts={filteredProducts}
+              handleClick={handleClick}
+            />
+          </div>
+
+          <div className="App_List_Itens">
+            <MenuContainer products={products} handleClick={handleClick} />
+          </div>
+        </div>
+        <div className="App_List_Cart_Box">
+          <TotCar currentSale={currentSale} />
+          <div className="App_List_Cart">
+            <Cart
+              currentSale={currentSale}
+              handleRemove={handleRemove}
+              products={products}
+            />
+          </div>
+        </div>
+      </main>
     </body>
   );
 }
