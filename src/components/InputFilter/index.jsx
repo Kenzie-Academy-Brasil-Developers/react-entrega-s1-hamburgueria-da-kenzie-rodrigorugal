@@ -1,4 +1,3 @@
-import "./styleInput.css";
 import { useState } from "react";
 
 const InputFilter = ({ products, setFilteredProducts, filteredProducts }) => {
@@ -19,22 +18,19 @@ const InputFilter = ({ products, setFilteredProducts, filteredProducts }) => {
     );
 
     setValueInput("");
-
-    // if (filtName.map((item) => item.name === valueInput)) {
-    //   setFilteredProducts(filtName);
-    // } else if (filtCategory.map((item) => item.category === valueInput)) {
-    //   setFilteredProducts(filtCategory);
-    // }
   };
 
   return (
     <div>
       <input
+        className="inputStyle"
         type="text"
         value={valueInput}
         onChange={(event) => setValueInput(event.target.value)}
       />
-      <button onClick={handleFilter}>Pesquisar</button>
+      <button className="bntInputStyle" onClick={handleFilter}>
+        Pesquisar
+      </button>
     </div>
   );
 };

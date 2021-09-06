@@ -34,19 +34,19 @@ a {
   margin: 0;
 }
 *::-webkit-scrollbar-track {
-  background: #3a3a3a;
+  background: #c9c9c900;
   border-radius: 20px;
   margin: 0;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #5454e2;
+  background-color: #8c561d00;
   border-radius: 20px;
   margin: 0;
 }
-
+/*  #2e2e2e */
 .App_Body {
   position: relative;
-  background-color: #2e2e2e;
+  background-image: linear-gradient(#221500, #6a4103, #ff9100);
   height: 100vh;
   width: 100vw;
   font-size: calc(10px + 1.1vmin);
@@ -57,15 +57,16 @@ a {
 }
 
 li {
-  width: 100px;
+  width: 130px;
   height: 120px;
   margin: 0 3px 0 3px;
-  background-color: #a7a7bde2;
+  background-color: #f3b16a2f;
+  border-radius: 15px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .Search_Filter {
@@ -82,6 +83,7 @@ li {
   height: 150px;
   /* background-color: green; */
   overflow: auto;
+  margin: 0px 0 11px 0;
 }
 .filterItens ul {
   display: flex;
@@ -89,6 +91,7 @@ li {
 
 .App_List_Itens {
   overflow: auto;
+  height: 200px;
 }
 .App_List_Itens ul {
   display: flex;
@@ -97,10 +100,14 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 165px;
 }
 .bntList {
-  width: 80px;
+  width: 120px;
   margin: 0 5px 0 5px;
+  padding: 5px 1vw;
+  border: none;
+  border-radius: 30px;
 }
 
 .App_List_Cart_Box {
@@ -126,4 +133,95 @@ li {
   width: 80px;
   margin: 0 5px 0 5px;
   padding: 5px 0;
+  border: none;
+  border-radius: 30px;
+}
+.valueCar {
+  width: 100%;
+  background-image: linear-gradient(to left, #70450525, #412800bd, #70450525);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+
+  font-size: 17px;
+}
+.valueTot::after {
+  /* display: block; */
+  content: " ";
+  margin-left: 3px;
+  padding: 3px;
+}
+
+/* Input && Button */
+.inputStyle,
+.bntInputStyle {
+  border: none;
+  border-radius: 30px;
+  padding: 5px;
+}
+.bntInputStyle {
+  margin-left: 5px;
+}
+
+/* Fundo dos produtos */
+.Hamburguer,
+.X-Burguer,
+.X-Salada,
+.Big_Kenzie {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Guaraná,
+.Coca,
+.Fanta {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.Hamburguer {
+  background-image: url(./img/carro-chefe-da-casa-criado.jpg);
+}
+.X-Burguer {
+  background-image: url(./img/X-Burguer.png);
+}
+.X-Salada {
+  background-image: url(./img/x-salada.jpg);
+}
+.Big_Kenzie {
+  background-image: url(./img/X-Tudo.jpeg);
+}
+.Guaraná {
+  background-image: url(./img/Guarana.png);
+}
+.Coca {
+  background-image: url(./img/Coca-cola.png);
+}
+.Fanta {
+  background-image: url(./img/Fanta-lata.png);
+}
+
+.space_Item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  font-style: italic;
+  font-variant: small-caps;
+  color: white;
+}
+
+/* media query */
+
+@media (min-width: 769px) {
+  /*****
+    Posicionar a lista do carrinho na vertical no lado direito
+    Diminuir a box dos item central e de pesquisa
+  ******/
 }

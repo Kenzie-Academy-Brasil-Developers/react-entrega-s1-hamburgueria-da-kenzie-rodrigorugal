@@ -8,17 +8,58 @@ import ProductsFiltered from "./components/ProductsFiltered";
 
 function App() {
   const [products, setProducts] = useState([
-    { id: 1, name: "Hamburguer", category: "Sanduíches", price: 7.99 },
-    { id: 2, name: "X-Burguer", category: "Sanduíches", price: 8.99 },
-    { id: 3, name: "X-Salada", category: "Sanduíches", price: 10.99 },
-    { id: 4, name: "Big Kenzie", category: "Sanduíches", price: 16.99 },
-    { id: 5, name: "Guaraná", category: "Bebidas", price: 4.99 },
-    { id: 6, name: "Coca", category: "Bebidas", price: 4.99 },
-    { id: 7, name: "Fanta", category: "Bebidas", price: 4.99 },
+    {
+      id: 1,
+      name: "Hamburguer",
+      category: "Sanduíches",
+      price: 7.99,
+      src: "./img/carro-chefe-da-casa-criada.jpg",
+    },
+    {
+      id: 2,
+      name: "X-Burguer",
+      category: "Sanduíches",
+      price: 8.99,
+      src: "./img/X-Burguer.png",
+    },
+    {
+      id: 3,
+      name: "X-Salada",
+      category: "Sanduíches",
+      price: 10.99,
+      src: "./img/x-salada.jpg",
+    },
+    {
+      id: 4,
+      name: "Big_Kenzie",
+      category: "Sanduíches",
+      price: 16.99,
+      src: "./img/X-Tudo.jpeg",
+    },
+    {
+      id: 5,
+      name: "Guaraná",
+      category: "Bebidas",
+      price: 4.99,
+      src: "./img/guarana.jpg",
+    },
+    {
+      id: 6,
+      name: "Coca",
+      category: "Bebidas",
+      price: 4.99,
+      src: "./img/Coca.jpeg",
+    },
+    {
+      id: 7,
+      name: "Fanta",
+      category: "Bebidas",
+      price: 4.99,
+      src: "./img/Fanta.jpeg",
+    },
   ]);
 
   const [filteredProducts, setFilteredProducts] = useState([]);
-
   const [currentSale, setCurrentSale] = useState([]);
 
   const handleRemove = (productId) => {
@@ -27,13 +68,6 @@ function App() {
   };
 
   const handleClick = (productId) => {
-    // if (currentSale.find((element) => element.id === productId) === undefined) {
-    //   setCurrentSale([
-    //     ...currentSale,
-    //     products.find((item) => item.id === productId),
-    //   ]);
-    // }
-
     const newSale = products.find((products) => products.id === productId);
     currentSale.find((element) => element.id === productId) === undefined
       ? setCurrentSale([...currentSale, newSale])

@@ -4,9 +4,11 @@ const TotCar = ({ currentSale }) => {
   }, 0);
 
   return (
-    <div>
-      <p>Valor Total</p>
-      <p>R$ {valTotal.toFixed(2)}</p>
+    <div className="valueCar">
+      <p className="valueTot">Valor Total</p>
+      <p>
+        R$ <span>{valTotal.toFixed(2)}</span>
+      </p>
     </div>
   );
 };

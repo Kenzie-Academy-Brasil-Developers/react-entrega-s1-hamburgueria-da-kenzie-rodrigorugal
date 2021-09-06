@@ -1,12 +1,16 @@
+import { useState } from "react";
+
 const Product = ({ item, handleClick }) => {
+  const [fundoProcuts, setFundoProcuts] = useState("");
+
   return (
-    <li>
-      {/* <img src="#" /> */}
-      <p>{item.name}</p>
-      <p>{item.category}</p>
-      <p>R$ {item.price}</p>
+    <li className={item.name}>
+      <div className="space_Item">
+        <p>R$ {item.price}</p>
+        <p>{item.category}</p>
+      </div>
       <button className="bntList" onClick={() => handleClick(item.id)}>
-        Add Carrinho
+        {item.name}
       </button>
     </li>
   );
