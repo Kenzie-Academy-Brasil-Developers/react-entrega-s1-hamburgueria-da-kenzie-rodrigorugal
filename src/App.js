@@ -68,8 +68,8 @@ function App() {
   };
 
   return (
-    <body className="App_Body">
-      <main className="App_Main">
+    <div className="App_Body">
+      <div className="App_Main">
         <div className="Search_Filter">
           <InputFilter
             products={products}
@@ -100,8 +100,8 @@ function App() {
             />
           </div>
         </div>
-      </main>
-    </body>
+      </div>
+    </div>
   );
 }
 
