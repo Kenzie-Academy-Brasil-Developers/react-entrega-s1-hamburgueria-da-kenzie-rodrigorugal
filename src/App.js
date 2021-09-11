@@ -3,8 +3,6 @@ import { useState } from "react";
 import MenuContainer from "./components/MenuContainer";
 import Cart from "./components/Cart";
 import TotCar from "./components/TotCar";
-import InputFilter from "./components/InputFilter";
-import ProductsFiltered from "./components/ProductsFiltered";
 
 function App() {
   const [products, setProducts] = useState([
@@ -52,7 +50,6 @@ function App() {
     },
   ]);
 
-  const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
 
   const handleRemove = (productId) => {
@@ -70,26 +67,10 @@ function App() {
   return (
     <div className="App_Body">
       <div className="App_Main">
-        <div className="Search_Filter">
-          <InputFilter
-            products={products}
-            setFilteredProducts={setFilteredProducts}
-            filteredProducts={filteredProducts}
-          />
+        <div className="App_List_Itens">
+          <MenuContainer products={products} handleClick={handleClick} />
         </div>
 
-        <div className="centerItensDesktop">
-          <div className="filterItens">
-            <ProductsFiltered
-              filteredProducts={filteredProducts}
-              handleClick={handleClick}
-            />
-          </div>
-
-          <div className="App_List_Itens">
-            <MenuContainer products={products} handleClick={handleClick} />
-          </div>
-        </div>
         <div className="App_List_Cart_Box">
           <TotCar currentSale={currentSale} />
           <div className="App_List_Cart">

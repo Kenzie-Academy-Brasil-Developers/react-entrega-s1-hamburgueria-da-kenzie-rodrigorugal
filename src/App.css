@@ -71,129 +71,50 @@ a {
   border-radius: 20px;
 }
 
-button {
-  cursor: pointer;
-}
-button:hover {
-  transform: scale(110%);
-  box-shadow: 0 0 8px 2px #221500;
-}
-
-li {
-  width: 130px;
-  height: 120px;
-  margin: 0 3px 0 3px;
-  background-color: #f3b16a2f;
-  border-radius: 15px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.Search_Filter {
-  height: 50px;
-  width: 100%;
-  margin-bottom: 10px;
-  /* background-color: aqua; */
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.filterItens {
-  height: 225px;
-  /* background-color: green; */
-  overflow: auto;
-  margin: 0px 0 11px 0;
-}
-.filterItens ul {
-  display: flex;
-}
-
-.filterItens ul li {
-  height: 205px;
-  margin: 10px;
-}
-
 .App_List_Itens {
-  overflow: auto;
-  height: 218px;
-}
-.App_List_Itens ul {
-  display: flex;
-}
-.App_List_Itens ul li {
+  height: 375px;
+  width: 100%;
+  border-bottom: 2px solid grey;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 197px;
-  width: 125px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.bntList {
-  width: 120px;
-  margin: 0 5px 0 5px;
-  padding: 5px 1vw;
-  border: none;
-  border-radius: 30px;
+  justify-content: space-around;
 }
 
-.App_List_Cart_Box {
+.boxGeral {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
 
-  height: 35%;
-  /* background-color: #62628a; */
+.listUl {
+  overflow-y: auto;
+  height: 326px;
+  width: 75%;
 }
-.App_List_Cart {
-  width: 100%;
-  overflow: auto;
-}
-.paiListCart {
-  overflow: auto;
-}
-.listCart {
+
+.listUl ul {
   display: flex;
-}
-.bntCar {
-  width: 80px;
-  margin: 0 5px 0 5px;
-  padding: 5px 0;
-  border: none;
-  border-radius: 30px;
-}
-.valueCar {
+  flex-direction: column;
+
   width: 100%;
-  background-image: linear-gradient(to left, #70450525, #412800bd, #70450525);
+}
+
+.listUl ul li {
+  height: 305px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 20px;
-
-  font-size: 17px;
-}
-.valueTot::after {
-  /* display: block; */
-  content: " ";
-  margin-left: 3px;
-  padding: 3px;
-}
-
-/* Input && Button */
-.inputStyle,
-.bntInputStyle {
-  border: none;
-  border-radius: 30px;
+  justify-content: space-between;
   padding: 5px;
-}
-.bntInputStyle {
-  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 22px;
+  border-top: 7px solid gray;
+  border-bottom: 4px solid grey;
 }
 
 /* Fundo dos produtos */
@@ -234,21 +155,6 @@ li {
   background-image: url(./img/Fanta-lata.png);
 }
 
-.space_Item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-
-  font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 600;
-  font-style: italic;
-  font-variant: small-caps;
-  color: white;
-}
-
 /* media query */
 
 @media (min-width: 1000px) {
@@ -267,29 +173,6 @@ li {
     background-color: #44290be7;
   }
 
-  .App_Main {
-    position: relative;
-    padding: 20px;
-    max-width: 1120px;
-  }
-
-  .App_List_Cart {
-    height: 90%;
-  }
-
-  .App_List_Cart_Box {
-    background-color: #af8a5a6e;
-    position: absolute;
-    top: 103px;
-    width: 200px;
-    height: 481px;
-    border-radius: 25px;
-    box-shadow: 0 0 8px 2px #6b450b;
-  }
-  .App_List_Itens {
-    width: 72%;
-  }
-
   .App_List_Cart {
     border-radius: 20px;
   }
@@ -304,14 +187,6 @@ li {
   .listCart li {
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-  .centerItensDesktop {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-around;
-    width: 96%;
-    height: 80%;
   }
 
   .filterItens ul {
