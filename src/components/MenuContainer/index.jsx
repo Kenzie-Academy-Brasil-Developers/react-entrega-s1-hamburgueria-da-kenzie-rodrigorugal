@@ -3,9 +3,16 @@ import Product from "../Products";
 
 const MenuContainer = ({ products, handleClick }) => {
   const [busca, setBusca] = useState("");
+  const [filtroName, setFiltroName] = useState([]);
+  const [filtroCategory, setFiltroCategory] = useState([]);
 
-  const filtro = products.filter((item) =>
-    item.name.toLowerCase().includes(busca.toLowerCase())
+  // con = products.filter((item) =>
+  //   item.category.toLowerCase().includes(busca.toLowerCase())
+  // );
+  const filtro = products.filter(
+    (item) =>
+      item.name.toLowerCase().includes(busca.toLowerCase()) ||
+      item.category.toLowerCase().includes(busca.toLowerCase())
   );
 
   return (
@@ -22,6 +29,13 @@ const MenuContainer = ({ products, handleClick }) => {
           {filtro.map((item) => (
             <Product item={item} handleClick={handleClick}></Product>
           ))}
+
+          {/* {filtroCategory.map((item) => (
+            <Product item={item} handleClick={handleClick}></Product>
+          ))}
+          {filtro.map((item) => (
+            <Product item={item} handleClick={handleClick}></Product>
+          ))} */}
         </ul>
       </div>
     </div>
