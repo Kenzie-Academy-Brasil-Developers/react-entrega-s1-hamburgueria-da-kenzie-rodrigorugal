@@ -103,7 +103,8 @@ a {
 .listUl ul {
   display: flex;
   flex-direction: column;
-
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -115,6 +116,7 @@ a {
 }
 .listUl ul li {
   height: 305px;
+  width: 182px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,6 +131,7 @@ a {
 .App_List_Cart {
   margin-top: 10px;
   width: 100%;
+  min-height: 95px;
   overflow-x: auto;
   box-shadow: inset 0 0 8px 2px black;
   border-radius: 10px;
@@ -236,13 +239,15 @@ input:focus {
 
 .ajusteUl {
   padding-right: 10px;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Hover */
 button:hover {
   box-shadow: 0 0 6px 2px #000000;
-  transform: scale(110%);
+  display: flex;
 }
 .itemListCart:hover {
   background-color: #41414186;
