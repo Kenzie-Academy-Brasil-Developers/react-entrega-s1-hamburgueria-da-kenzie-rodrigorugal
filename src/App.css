@@ -104,6 +104,12 @@ a {
   width: 100%;
 }
 
+.bntList {
+  padding: 3px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ff9800;
+}
 .listUl ul li {
   height: 305px;
   display: flex;
@@ -152,6 +158,34 @@ a {
   background-color: #80808091;
   padding: 2px 25px;
   border-radius: 10px;
+}
+
+.inputStyle {
+  border-radius: 20px;
+  border: none;
+  cursor: text;
+  border-bottom: 2px solid #b17009;
+  background-color: #8c8c8c6b;
+  padding: 4px 25px;
+}
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: none;
+  border-bottom: 2px solid #b17009;
+  outline: 0;
+  color: #f0f8ff;
+}
+
+.space_Item :first-child {
+  font-size: 20px;
+  font-family: system-ui;
+  font-weight: 600;
+}
+.space_Item :last-child {
+  font-size: 20px;
+  font-family: system-ui;
+  font-weight: 600;
+  color: #f0f8ff;
 }
 
 /* Fundo dos produtos */
