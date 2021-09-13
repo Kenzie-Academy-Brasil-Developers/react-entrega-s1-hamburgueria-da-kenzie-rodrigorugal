@@ -228,7 +228,7 @@ input:focus {
 
 /* media query */
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
   /*****
     Posicionar a lista do carrinho na vertical no lado direito
     Diminuir a box dos item central e de pesquisa
@@ -241,31 +241,34 @@ input:focus {
     background: #c9c9c900;
   }
   *::-webkit-scrollbar-thumb {
-    background-color: #44290be7;
+    background-color: #130c05e7;
   }
 
-  .App_List_Cart {
-    border-radius: 20px;
+  .App_List_Cart_Box {
+    height: 175px;
   }
-  .paiListCart {
+
+  .App_List_Itens {
+    height: 465px;
+  }
+  .itemListCart {
+    height: 112px;
+    min-width: 105px;
+    margin-bottom: 3px;
+  }
+  .listUl ul {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    width: 100%;
   }
-  .listCart {
-    flex-direction: column;
+  .listUl ul li {
+    min-width: 257px;
+    margin: 0 10px;
+    background-color: #f0f8ff24;
   }
-  .listCart li {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .bntList {
+    font-size: 20px;
   }
-
-  .filterItens ul {
-    align-items: center;
-    justify-content: center;
-  }
-
-  li:hover {
-    box-shadow: 0 0 8px 2px #6a4103;
-  }
+}
+@media (min-width: 768px) {
 }
