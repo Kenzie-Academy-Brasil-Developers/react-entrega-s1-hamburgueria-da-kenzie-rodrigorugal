@@ -61,7 +61,7 @@ a {
 .App_Main {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 95%;
+  height: 98%;
   width: 90%;
   padding: 15px 5px 5px 5px;
   display: flex;
@@ -93,8 +93,11 @@ a {
 
 .listUl {
   overflow-y: auto;
-  height: 326px;
+  height: 336px;
+  padding: 10px;
   width: 75%;
+  box-shadow: inset 0 0 8px 2px black;
+  border-radius: 10px;
 }
 
 .listUl ul {
@@ -127,6 +130,9 @@ a {
   margin-top: 10px;
   width: 100%;
   overflow-x: auto;
+  box-shadow: inset 0 0 8px 2px black;
+  border-radius: 10px;
+  padding: 10px;
 }
 .App_List_Cart_Box {
   height: 121px;
@@ -228,6 +234,24 @@ input:focus {
   background-image: url(./img/Fanta-lata.png);
 }
 
+.ajusteUl {
+  padding-right: 10px;
+  width: fit-content;
+}
+
+/* Hover */
+button:hover {
+  box-shadow: 0 0 6px 2px #000000;
+  transform: scale(110%);
+}
+.itemListCart:hover {
+  background-color: #41414186;
+}
+.listUl ul li:hover {
+  transform: scale(103%);
+  box-shadow: 0 0 100px 187px #00000066;
+}
+
 /* media query */
 
 @media (min-width: 600px) {
@@ -257,10 +281,21 @@ input:focus {
   .App_List_Itens {
     height: 465px;
   }
+  .App_List_Cart {
+    padding: 1px;
+  }
   .itemListCart {
     height: 95px;
     min-width: 105px;
     margin-bottom: 3px;
+  }
+  .listUl {
+    overflow-y: auto;
+    height: 336px;
+    padding: 10px;
+    width: 85%;
+    box-shadow: inset 0 0 8px 2px black;
+    border-radius: 10px;
   }
   .listUl ul {
     display: flex;
@@ -269,7 +304,8 @@ input:focus {
   }
   .listUl ul li {
     min-width: 257px;
-    margin: 0 10px;
+    margin: 0 5px;
+    height: 300px;
   }
   .bntList {
     font-size: 20px;
@@ -289,12 +325,12 @@ input:focus {
     height: 100%;
     flex-direction: column;
   }
+  .App_List_Cart {
+    height: 342px;
+  }
   .App_List_Cart_Box {
     padding-top: 37px;
     height: 86%;
     width: 100%;
-  }
-  .App_List_Cart {
-    border-left: 2px solid rgba(128, 128, 128, 0.61);
   }
 }

@@ -25,18 +25,13 @@ const MenuContainer = ({ products, handleClick }) => {
       />
 
       <div className="listUl">
-        <ul>
-          {filtro.map((item) => (
-            <Product item={item} handleClick={handleClick}></Product>
-          ))}
-
-          {/* {filtroCategory.map((item) => (
-            <Product item={item} handleClick={handleClick}></Product>
-          ))}
-          {filtro.map((item) => (
-            <Product item={item} handleClick={handleClick}></Product>
-          ))} */}
-        </ul>
+        <div className="ajusteUl">
+          <ul>
+            {filtro.map((item) => (
+              <Product item={item} handleClick={handleClick}></Product>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
