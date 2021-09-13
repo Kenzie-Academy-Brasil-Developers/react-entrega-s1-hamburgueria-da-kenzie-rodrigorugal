@@ -7,7 +7,7 @@ const Cart = ({ currentSale, handleRemove }) => {
             <p>{item.name}</p>
             <p>R$ {item.price}</p>
             <button className="bntCar" onClick={() => handleRemove(item.id)}>
-              Remover
+              X
             </button>
           </li>
         ))}

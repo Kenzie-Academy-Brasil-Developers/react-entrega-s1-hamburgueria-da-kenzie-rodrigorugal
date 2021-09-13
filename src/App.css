@@ -116,18 +116,42 @@ a {
   border-top: 7px solid gray;
   border-bottom: 4px solid grey;
 }
-
+.App_List_Cart {
+  margin-top: 10px;
+  width: 100%;
+  overflow-x: auto;
+}
 .App_List_Cart_Box {
   height: 121px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 }
 
 .listCart {
   display: flex;
   align-items: center;
+}
+
+.itemListCart {
+  height: 70px;
+  background-color: #00000066;
+  min-width: 81px;
+  border-top: 5px solid grey;
+  border-bottom: 4px solid grey;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 5px;
+}
+.itemListCart button {
+  border: none;
+  background-color: #80808091;
+  padding: 2px 25px;
+  border-radius: 10px;
 }
 
 /* Fundo dos produtos */
