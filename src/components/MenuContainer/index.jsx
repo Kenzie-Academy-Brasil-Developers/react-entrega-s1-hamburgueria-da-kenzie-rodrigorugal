@@ -6,9 +6,6 @@ const MenuContainer = ({ products, handleClick }) => {
   const [filtroName, setFiltroName] = useState([]);
   const [filtroCategory, setFiltroCategory] = useState([]);
 
-  // con = products.filter((item) =>
-  //   item.category.toLowerCase().includes(busca.toLowerCase())
-  // );
   const filtro = products.filter(
     (item) =>
       item.name.toLowerCase().includes(busca.toLowerCase()) ||
@@ -25,13 +22,11 @@ const MenuContainer = ({ products, handleClick }) => {
       />
 
       <div className="listUl">
-        <div className="ajusteUl">
-          <ul>
-            {filtro.map((item) => (
-              <Product item={item} handleClick={handleClick}></Product>
-            ))}
-          </ul>
-        </div>
+        <ul>
+          {filtro.map((item) => (
+            <Product item={item} handleClick={handleClick}></Product>
+          ))}
+        </ul>
       </div>
     </div>
   );
